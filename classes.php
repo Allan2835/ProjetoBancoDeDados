@@ -7,10 +7,10 @@ function cadastrarUsuarios($conexao, $nome_usuario, $cpf, $data_nascimento, $tel
     VALUES ('$nome_usuario', '$cpf','$data_nascimento','$telefone','$endereco', '$num_casa', '$bairro', '$fk_id_cidades', '1', '$tipo_usuario','$login','$senha' )";
     $sql_conexao = $conexao->query($dados) or die($conexao->error);
 
-    return $sql_conexao;//ja usada.
+    return $sql_conexao;//ja usada.----------------------
 }
 
-function relatorioUsuario($conexao) //Já usada.
+function relatorioUsuario($conexao) //Já usada.-----------------
 {
     $dados = "SELECT * FROM tb_usuarios";
 
