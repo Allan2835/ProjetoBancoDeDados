@@ -7,5 +7,5 @@ const users = [
 
 function validarLogin(usuario, senha) {
     const user = users.find(user => user.usuario === usuario && user.senha === senha);
-    return !!user;
+    return user;
 }
