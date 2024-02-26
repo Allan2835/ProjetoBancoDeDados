@@ -1,10 +1,10 @@
 <?php
 include 'conexao.php';
 
-function cadastrarUsuarios($conexao, $nome_usuario, $cpf, $data_nascimento, $telefone, $endereco, $num_casa, $bairro, $fk_id_cidades, $tipo_usuario, $login, $senha)
+function cadastrarUsuarios($conexao, $nome_usuario, $cpf, $data_nascimento, $telefone, $endereco, $num_casa, $bairro, $fk_id_tb_cidades, $tipo_usuario, $login, $senha)
 {
-    $dados = "INSERT INTO tb_usuarios (nome_usuario,cpf,data_nascimento,telefone,endereço,num_casa,bairro,fk_id_cidades,ativo,tipo_usuario,login,senha)
-    VALUES ('$nome_usuario', '$cpf','$data_nascimento','$telefone','$endereco', '$num_casa', '$bairro', '$fk_id_cidades', '1', '$tipo_usuario','$login','$senha' )";
+    $dados = "INSERT INTO tb_usuarios (nome_usuario,cpf,data_nascimento,telefone,endereço,num_casa,bairro,fk_id_tb_cidades,ativo,tipo_usuario,login,senha)
+    VALUES ('$nome_usuario', '$cpf','$data_nascimento','$telefone','$endereco', '$num_casa', '$bairro', '$fk_id_tb_cidades', '1', '$tipo_usuario','$login','$senha' )";
     $sql_conexao = $conexao->query($dados) or die($conexao->error);
 
     return $sql_conexao;//ja usada.----------------------
