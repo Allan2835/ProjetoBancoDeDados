@@ -20,7 +20,7 @@ function relatorioUsuario($conexao) //Já usada.-----------------
 }
 $dadosCliente = relatorioUsuario($conexao);
 
-function cidades($conexao, $id_cidade)
+function cidades($conexao, $id_cidade) //Já usada.-----------------
 {
     $dados = "SELECT nome_cidade FROM tb_cidades WHERE id = '$id_cidade'";
     $sql_conexao = $conexao->query($dados) or die($conexao->error);

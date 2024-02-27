@@ -93,8 +93,6 @@ relatorioUsuario($conexao)
                         <td>
                             <a href="editarUsuario.php?id=<?php echo $usuarios['id']; ?>" class="btn btn-primary"><i
                                     class="fa-solid fa-pen-to-square"></i></a>
-                        </td>
-                        <td>
                             <button type="submit" onclick="atualizarUsuario(<?php echo $usuarios['id']; ?>)"
                                 class="btn btn-success"><i class="fa-solid fa-rotate-right"></i></button>
                         </td>

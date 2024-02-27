@@ -15,7 +15,7 @@
             <input type="text" id="endereco" name="endereco" required>
 
             <label for="tipo_usuario">Tipo de Usuário:</label>
-            <input type="text" id="tipoUsuario"name="tipo_usuario" required>
+            <input type="text" id="tipoUsuario" name="tipo_usuario" required>
 
             <label for="login">Login:</label>
             <input type="text" id="login" name="login" required>
