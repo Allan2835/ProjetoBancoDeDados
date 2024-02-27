@@ -1,13 +1,15 @@
 <?php
 include 'conexao.php';
 
-function cadastrarUsuarios($conexao, $nome_usuario, $cpf, $data_nascimento, $telefone, $endereco, $num_casa, $bairro, $fk_id_tb_cidades, $tipo_usuario, $login, $senha)
+
+function cadastrarUsuarios($conexao, $nome_usuario, $endereco, $tipo_usuario, $login, $senha)
 {
-    $dados = "INSERT INTO tb_usuarios (nome_usuario,cpf,data_nascimento,telefone,endereço,num_casa,bairro,fk_id_tb_cidades,ativo,tipo_usuario,login,senha)
-    VALUES ('$nome_usuario', '$cpf','$data_nascimento','$telefone','$endereco', '$num_casa', '$bairro', '$fk_id_tb_cidades', '1', '$tipo_usuario','$login','$senha' )";
+    $dados = "INSERT INTO tb_usuarios (nome_usuario, endereco, tipo_usuario, login, senha)
+    VALUES ('$nome_usuario', '$endereco', '$tipo_usuario', '$login', '$senha')";
+
     $sql_conexao = $conexao->query($dados) or die($conexao->error);
 
-    return $sql_conexao;//ja usada.----------------------
+    return $sql_conexao; //ja usada.----------------------
 }
 
 function relatorioUsuario($conexao) //Já usada.-----------------
@@ -25,7 +27,6 @@ function cidades($conexao, $id_cidade) //Já usada.-----------------
     $dados = "SELECT nome_cidade FROM tb_cidades WHERE id = '$id_cidade'";
     $sql_conexao = $conexao->query($dados) or die($conexao->error);
     return $sql_conexao;
-
 }
 
 function inativarUsuario($idUsuario)
@@ -40,6 +41,7 @@ function inativarUsuario($idUsuario)
         echo "Erro ao inativar usuário.";
     }
 }
+
 
 function atualizarUsuario($idUsuario, $novosDados)
 {
@@ -60,4 +62,3 @@ function atualizarUsuario($idUsuario, $novosDados)
 }
 
 ?>
-
