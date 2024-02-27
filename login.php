@@ -13,7 +13,7 @@
 <body>
     <div class="login">
         <h2>Login</h2>
-        <form class="login-form" action="validar.php" method="get">
+        <form class="login-form" action="validar.php" method="post">
             <div class="pagLogin">
                 <label for="login"></label>
                 <input type="text" id="login" name="login" placeholder="Usuário" required>
@@ -31,12 +31,13 @@
     </div>
 </body>
 
+
 </html>
 <script>
-    function login() {
+    login() {
         let login = document.getElementById('login').value;
         let senha = document.getElementById('senha').value;
 
-        window.open(`validar.php?login=${login}&&senha=${senha}`);
+        window.open(`validar.php?login=${login}&&senha=${senha}`, '_self');
     }
 </script>

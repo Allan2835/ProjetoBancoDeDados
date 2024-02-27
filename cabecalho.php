@@ -10,10 +10,9 @@
         color: #fff;
         padding: 10px;
         text-align: center;
-    }
-
-    .cabecalho h1 {
-        margin: 0;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
     }
 
     .cabecalho nav {
@@ -34,13 +33,17 @@
         color: black;
     }
 </style>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+    integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
 
 <body>
     <div class="cabecalho">
         <nav>
-            <a href="#"></a>
-            <a href="#">Home</a>
-            <a href="#">Usuários</a>
+            <a href="home.php">Home</a>
+            <a href="relatorio.php">Usuários</a>
+            <a href="cadastro.php">Cadastrar usuário</a>
         </nav>
+        <a href="login.php"><i class="fa-solid fa-right-from-bracket"></i></a>
     </div>
 </body>

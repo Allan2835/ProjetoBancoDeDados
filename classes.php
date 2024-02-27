@@ -58,4 +58,6 @@ function atualizarUsuario($idUsuario, $novosDados)
         echo "Erro ao atualizar informações do usuário.";
     }
 }
+
 ?>
+

@@ -7,7 +7,7 @@
     <?php include 'cabecalho.php'; ?>
     <div class="cadastro">
         <h2>Cadastro de Usuário</h2>
-        <form method="get" action="cadastro.php">
+        <form method="post" action="cadastro.php">
             <label for="nome">Nome:</label>
             <input type="text" id="nome" name="nome" required>
 
