@@ -4,7 +4,7 @@ include 'conexao.php';
 
 function cadastrarUsuarios($conexao, $nome_usuario, $endereco, $tipo_usuario, $login, $senha)
 {
-    $dados = "INSERT INTO tb_usuarios (nome_usuario, endereço, tipo_usuario, login, senha)
+    $dados = "INSERT INTO tb_usuarios (nome_usuario, endereco, tipo_usuario, login, senha)
     VALUES ('$nome_usuario', '$endereco', '$tipo_usuario', '$login', '$senha')";
 
     $sql_conexao = $conexao->query($dados) or die($conexao->error);

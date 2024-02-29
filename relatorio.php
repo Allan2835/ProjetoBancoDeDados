@@ -61,7 +61,7 @@ relatorioUsuario($conexao)
                             <?php echo $usuarios['telefone']; ?>
                         </td>
                         <td>
-                            <?php echo $usuarios['endereço']; ?>
+                            <?php echo $usuarios['endereco']; ?>
                         </td>
                         <td>
                             <?php echo $usuarios['num_casa']; ?>
